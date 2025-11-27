@@ -102,25 +102,6 @@ export const FeaturedMagazines = () => {
             </div>
           </div>
 
-          {/* Navigation Buttons */}
-          <div className="absolute bottom-8 right-8 flex gap-2">
-            <Button
-              variant="secondary"
-              size="icon"
-              onClick={goToPrevious}
-              className="rounded-full shadow-medium hover:shadow-large transition-all bg-background/90 backdrop-blur-sm"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </Button>
-            <Button
-              variant="secondary"
-              size="icon"
-              onClick={goToNext}
-              className="rounded-full shadow-medium hover:shadow-large transition-all bg-background/90 backdrop-blur-sm"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </Button>
-          </div>
 
           {/* Dots Indicator */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">

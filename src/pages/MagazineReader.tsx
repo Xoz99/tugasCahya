@@ -382,32 +382,33 @@ const MagazineReader = () => {
     >
       {/* Header */}
       <div className="sticky top-0 z-40 border-b border-border bg-card/50 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 md:px-6 py-3 md:py-4 flex flex-col md:flex-row items-center justify-between gap-3">
           <Button
             variant="ghost"
+            size="sm"
             onClick={() => navigate(`/magazine/${id}`)}
-            className="hover:bg-accent/10"
+            className="hover:bg-accent/10 w-full md:w-auto"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Kembali
           </Button>
 
-          <div className="text-center">
-            <h2 className="font-serif font-bold text-foreground">
+          <div className="text-center flex-1">
+            <h2 className="font-serif font-bold text-foreground text-lg md:text-xl">
               {magazine.title}
             </h2>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-xs md:text-sm text-muted-foreground">
               Halaman {currentPage} dari {magazine.pages}
             </p>
           </div>
 
-          <div className="w-20" /> {/* Spacer untuk balance */}
+          <div className="hidden md:block w-20" /> {/* Spacer untuk balance */}
         </div>
       </div>
 
       {/* Content */}
-      <div className="flex-1 flex items-center justify-center px-6 py-8 overflow-auto bg-muted/20">
-        <div className="bg-white dark:bg-slate-900 rounded-lg shadow-2xl" style={{ width: '600px', aspectRatio: '9/12' }}>
+      <div className="flex-1 flex items-center justify-center px-3 md:px-6 py-4 md:py-8 overflow-auto bg-muted/20">
+        <div className="bg-white dark:bg-slate-900 rounded-lg shadow-2xl w-full md:w-[600px]" style={{ aspectRatio: '9/12', maxHeight: 'calc(100vh - 200px)' }}>
           <div className="h-full overflow-y-auto" style={{ padding: (currentPage >= 4 && currentPage <= 8) ? '0' : '24px 32px' }}>
             {renderPage()}
           </div>
@@ -416,15 +417,17 @@ const MagazineReader = () => {
 
       {/* Navigation Footer */}
       <div className="sticky bottom-0 z-40 border-t border-border bg-card/50 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-3 md:px-6 py-3 md:py-4 flex flex-col md:flex-row items-center justify-between gap-3">
           <Button
             variant="outline"
+            size="sm"
             onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
             disabled={currentPage === 1}
-            className="hover:bg-accent/10"
+            className="hover:bg-accent/10 w-full md:w-auto"
           >
             <ChevronLeft className="mr-2 h-4 w-4" />
-            Sebelumnya
+            <span className="hidden sm:inline">Sebelumnya</span>
+            <span className="sm:hidden">Prev</span>
           </Button>
 
           <div className="flex items-center gap-2">
@@ -439,20 +442,22 @@ const MagazineReader = () => {
                   setCurrentPage(page);
                 }
               }}
-              className="w-16 px-3 py-2 border border-border rounded text-center text-foreground bg-card"
+              className="w-12 md:w-16 px-2 md:px-3 py-2 border border-border rounded text-center text-xs md:text-base text-foreground bg-card"
             />
-            <span className="text-muted-foreground">
+            <span className="text-xs md:text-base text-muted-foreground">
               / {magazine.pages}
             </span>
           </div>
 
           <Button
             variant="outline"
+            size="sm"
             onClick={() => currentPage < magazine.pages && setCurrentPage(currentPage + 1)}
             disabled={currentPage === magazine.pages}
-            className="hover:bg-accent/10"
+            className="hover:bg-accent/10 w-full md:w-auto"
           >
-            Selanjutnya
+            <span className="hidden sm:inline">Selanjutnya</span>
+            <span className="sm:hidden">Next</span>
             <ChevronRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
