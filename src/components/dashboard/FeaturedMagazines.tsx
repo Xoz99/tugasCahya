@@ -6,28 +6,36 @@ import { useNavigate } from "react-router-dom";
 
 const featuredMagazines = [
   {
-    title: "Design Quarterly",
-    description: "The latest in modern design trends and creativity",
-    coverImage: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&q=80",
-    badge: "Editor's Pick"
+    id: "1",
+    title: "Siswa Berprestasi",
+    subtitle: "Sang Juara Azan",
+    description: "Dokumentasi siswa berprestasi SMAN 36 Jakarta yang telah menunjukkan kinerja unggul di berbagai bidang.",
+    coverImage: "/majalah/juaraAdzan.png",
+    badge: "Featured"
   },
   {
-    title: "Tech Innovation",
-    description: "Exploring the future of technology and digital transformation",
-    coverImage: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80",
-    badge: "Trending"
-  },
-  {
-    title: "Creative Minds",
-    description: "Stories from the world's most creative professionals",
-    coverImage: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80",
+    id: "3",
+    title: "Biografi & Puisi",
+    subtitle: "Kisah Hidup dan Inspirasi",
+    description: "Majalah kolaborasi yang berisi biografi B.J. Habibie dan Tan Malaka, serta puisi inspiratif dari siswa.",
+    coverImage: "/majalah/bjhabibie.png",
     badge: "Popular"
   },
   {
-    title: "Innovation Weekly",
-    description: "Weekly insights into innovation and entrepreneurship",
-    coverImage: "https://images.unsplash.com/photo-1495640388908-05fa85288e61?w=800&q=80",
+    id: "4",
+    title: "Active Generation",
+    subtitle: "Pola Hidup Sehat dan Kebugaran Jasmani",
+    description: "Majalah yang membahas pola hidup sehat dan kebugaran jasmani untuk generasi muda SMAN 36 Jakarta.",
+    coverImage: "/majalah/activeGen.png",
     badge: "New"
+  },
+  {
+    id: "6",
+    title: "Strategi & Solusi TKA Matematika",
+    subtitle: "Meningkatkan Kesiapan Siswa",
+    description: "Panduan komprehensif strategi dan tips mengerjakan soal TKA Matematika untuk meningkatkan kesiapan siswa.",
+    coverImage: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800&q=80",
+    badge: "Trending"
   },
 ];
 
@@ -83,10 +91,10 @@ export const FeaturedMagazines = () => {
                   {current.description}
                 </p>
 
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="gradient-gold text-primary font-semibold shadow-large hover:shadow-xl transition-all"
-                  onClick={() => navigate(`/magazine/${currentIndex + 1}`)}
+                  onClick={() => navigate(`/magazine/${current.id}`)}
                 >
                   Baca Sekarang
                 </Button>
