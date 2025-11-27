@@ -1,17 +1,9 @@
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
-import { StatCard } from "@/components/dashboard/StatCard";
 import { MagazineCard } from "@/components/dashboard/MagazineCard";
 import { RecentActivity } from "@/components/dashboard/RecentActivity";
-import { BookOpen, Users, Eye, Download } from "lucide-react";
+import { FeaturedMagazines } from "@/components/dashboard/FeaturedMagazines";
 
 const Index = () => {
-  const stats = [
-    { title: "Total Issues", value: "24", change: "+2 this month", icon: BookOpen, trend: "up" as const },
-    { title: "Active Readers", value: "12.5K", change: "+18% from last month", icon: Users, trend: "up" as const },
-    { title: "Total Views", value: "45.2K", change: "+24% from last month", icon: Eye, trend: "up" as const },
-    { title: "Downloads", value: "8.9K", change: "+12% from last month", icon: Download, trend: "up" as const },
-  ];
-
   const magazines = [
     {
       title: "Design Quarterly",
@@ -62,12 +54,8 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat, index) => (
-            <StatCard key={index} {...stat} />
-          ))}
-        </div>
+        {/* Featured Magazines Slider */}
+        <FeaturedMagazines />
 
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-3 gap-8">
