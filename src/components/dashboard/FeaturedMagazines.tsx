@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const featuredMagazines = [
   {
@@ -31,6 +32,7 @@ const featuredMagazines = [
 ];
 
 export const FeaturedMagazines = () => {
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -84,6 +86,7 @@ export const FeaturedMagazines = () => {
                 <Button 
                   size="lg" 
                   className="gradient-gold text-primary font-semibold shadow-large hover:shadow-xl transition-all"
+                  onClick={() => navigate(`/magazine/${currentIndex + 1}`)}
                 >
                   Baca Sekarang
                 </Button>
