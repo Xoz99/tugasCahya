@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Eye, Download, Calendar } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface MagazineCardProps {
   title: string;
@@ -9,9 +10,15 @@ interface MagazineCardProps {
   views: string;
   downloads: string;
   coverImage: string;
+  id?: string;
 }
 
-export const MagazineCard = ({ title, issue, date, views, downloads, coverImage }: MagazineCardProps) => {
+export const MagazineCard = ({ title, issue, date, views, downloads, coverImage, id }: MagazineCardProps) => {
+  const navigate = useNavigate();
+
+  const handleViewDetails = () => {
+    navigate(`/magazine/${id || '1'}`);
+  };
   return (
     <Card className="overflow-hidden shadow-soft hover:shadow-large transition-all duration-300 group">
       <div className="aspect-[3/4] overflow-hidden bg-muted">
@@ -46,6 +53,7 @@ export const MagazineCard = ({ title, issue, date, views, downloads, coverImage 
           variant="outline" 
           size="sm" 
           className="w-full font-medium hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors"
+          onClick={handleViewDetails}
         >
           View Details
         </Button>

@@ -11,6 +11,7 @@ const Index = () => {
   
   const allMagazines = [
     {
+      id: "1",
       title: "Design Quarterly",
       issue: "Issue #24 - November 2024",
       date: "Nov 15, 2024",
@@ -19,6 +20,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=80"
     },
     {
+      id: "2",
       title: "Tech Today",
       issue: "Issue #23 - October 2024",
       date: "Oct 20, 2024",
@@ -27,6 +29,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=400&q=80"
     },
     {
+      id: "3",
       title: "Creative Minds",
       issue: "Issue #22 - September 2024",
       date: "Sep 18, 2024",
@@ -35,6 +38,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&q=80"
     },
     {
+      id: "4",
       title: "Innovation Weekly",
       issue: "Issue #21 - August 2024",
       date: "Aug 25, 2024",
@@ -43,6 +47,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1495640388908-05fa85288e61?w=400&q=80"
     },
     {
+      id: "5",
       title: "Business Insight",
       issue: "Issue #20 - July 2024",
       date: "Jul 22, 2024",
@@ -51,6 +56,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&q=80"
     },
     {
+      id: "6",
       title: "Art & Culture",
       issue: "Issue #19 - June 2024",
       date: "Jun 18, 2024",
@@ -59,6 +65,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1513001900722-370f803f498d?w=400&q=80"
     },
     {
+      id: "7",
       title: "Health & Wellness",
       issue: "Issue #18 - May 2024",
       date: "May 20, 2024",
@@ -67,6 +74,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=400&q=80"
     },
     {
+      id: "8",
       title: "Travel Explorer",
       issue: "Issue #17 - April 2024",
       date: "Apr 15, 2024",
@@ -75,6 +83,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&q=80"
     },
     {
+      id: "9",
       title: "Fashion Forward",
       issue: "Issue #16 - March 2024",
       date: "Mar 22, 2024",
@@ -83,6 +92,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80"
     },
     {
+      id: "10",
       title: "Food & Dining",
       issue: "Issue #15 - February 2024",
       date: "Feb 18, 2024",
@@ -91,6 +101,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80"
     },
     {
+      id: "11",
       title: "Photography Today",
       issue: "Issue #14 - January 2024",
       date: "Jan 20, 2024",
@@ -99,6 +110,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400&q=80"
     },
     {
+      id: "12",
       title: "Music & Sound",
       issue: "Issue #13 - December 2023",
       date: "Dec 15, 2023",
@@ -107,6 +119,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&q=80"
     },
     {
+      id: "13",
       title: "Architecture Review",
       issue: "Issue #12 - November 2023",
       date: "Nov 18, 2023",
@@ -115,6 +128,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&q=80"
     },
     {
+      id: "14",
       title: "Science Monthly",
       issue: "Issue #11 - October 2023",
       date: "Oct 22, 2023",
@@ -123,6 +137,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&q=80"
     },
     {
+      id: "15",
       title: "Sports World",
       issue: "Issue #10 - September 2023",
       date: "Sep 15, 2023",
@@ -131,6 +146,7 @@ const Index = () => {
       coverImage: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&q=80"
     },
     {
+      id: "16",
       title: "Education Today",
       issue: "Issue #9 - August 2023",
       date: "Aug 20, 2023",
